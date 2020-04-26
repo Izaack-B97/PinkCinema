@@ -3,6 +3,7 @@
 <?php include(SHARED_PATH . '/header_admin.php'); ?>
 
 <?php
+
 	session_start();
 	if (!isset($_SESSION['rol'])) { // No puede entrar si no tiene un rol
 		header('location: login.php');
@@ -11,6 +12,13 @@
 			header('location: login.php');
 		}
 	}
+
+	if (isset($_GET['cerrar_sesion'])) {
+		session_unset(); // Cerramos session
+		session_destroy(); // Detruimos la session
+		redirect_to(url_for('web/login.php'));
+	}
+	$peliculas = find_all_peliculas();
 ?>
 
 <br>
@@ -87,7 +95,7 @@
 		<div class="col-sm-3">
 			<img src="images/endgame.jpg" class="mx-2 my-2">
 		</div>
-		
+
 	</div>	
 	<hr>
 	<h2 class="" style="">Proximos estrenos</h1>

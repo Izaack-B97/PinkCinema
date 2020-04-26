@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-sm-12 form-group">
                             <hr>
-                            <button type="submit" class="btn btn-outline-primary float-right">Guardar</button>
+                            <button type="submit" class="btn btn-outline-primary float-right">Registrar</button>
                         </div>
                     </div>
                 </form>

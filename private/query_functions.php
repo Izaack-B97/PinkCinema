@@ -63,6 +63,27 @@ function update_pelicula($pelicula) {
   }
 }
 
+function delete_pelicula($id){
+  global $db;
+  
+  $sql = "DELETE FROM peliculas ";
+    $sql .= "WHERE id= '" . $id . "' ";
+    $sql .= "LIMIT 1";
+  
+    $result = mysqli_query($db, $sql);
+  
+    //for DELETE statements, $result is true/false
+  
+    if ($result) {
+        redirect_to(url_for('/web/pages/administracion/peliculas.php'));
+      }else{
+        //DELETE failed
+        echo mysqli_error($db);
+        db_disconnect($db);
+        exit;
+      } 
+  }
+
 /** END MIS FUNCIONES ****/
 
 function find_all_subjects(){

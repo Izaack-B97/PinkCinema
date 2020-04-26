@@ -28,7 +28,7 @@
                         <a class="nav-link" href="../../public/web/pages/administracion/peliculas.php" >Administraci&oacute;n</a>
                       </li>
                       <li class="nav-item" style="border-left: 1px solid white">
-                        <a class="nav-link" href="#">Salir</a>
+                        <a class="nav-link" href="../web/index_admin.php?cerrar_sesion=1">Salir</a>
                       </li>
                     </ul>
                 </div>

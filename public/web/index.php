@@ -10,6 +10,12 @@
 			header('location: login.php');
 		} 
 	}
+
+	if (isset($_GET['cerrar_sesion'])) {
+		session_unset(); // Cerramos session
+		session_destroy(); // Detruimos la session
+		redirect_to(url_for('web/login.php'));
+	}
 ?>
 
 <br>
@@ -22,7 +28,14 @@
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div class="carousel-item active">
+      <img src="<?php echo url_for('web/images/blackwidow.jpg'); ?>" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+ 	<div class="carousel-item">
       <img src="<?php echo url_for('web/images/avengers.jpg'); ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
@@ -34,13 +47,6 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="<?php echo url_for('web/images/blackwidow.jpg'); ?>" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </div>
     </div>
   </div>
@@ -56,7 +62,7 @@
 <!-- END CARRUSEL -->
 
 <div id="content-main" class="container mt-5">
-	<h1 class="text-primary">Bienvenido  a PinkCinema</h1>
+	<h1 class="text-primary">Bienvenido a PinkCinema</h1>
 	<br>
 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum esse adipisci vel vitae illum incidunt, cumque placeat dolores quisquam voluptas minus libero maiores in ipsam animi numquam iure architecto molestias.</p>
 	<hr>
@@ -90,7 +96,34 @@
 	</div>	
 	<hr>
 	<h2 class="" style="">Proximos estrenos</h1>
-	<div id="area-estreno" class="mb-5 mt-5">	
+	<div id="area-peliculas-recientes" class="row my-3">
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		<div class="col-sm-3">
+			<img src="images/endgame.jpg" class="mx-2 my-2">
+		</div>
+		
+	</div>	
+	<!-- <div id="area-estreno" class="mb-5 mt-5">	
 		<div class="card d-inline-block m-1" style="width:18rem;">
 			<img src="<?php echo url_for('web/images/megalodon.jpg'); ?>" class="card-img-top" alt="...">
 		</div>
@@ -110,7 +143,7 @@
 			<img src="<?php echo url_for('web/images/megalodon.jpg'); ?>" class="card-img-top" alt="...">
 		</div>
 		
-	</div>
+	</div> -->
 	
 	
 </div>

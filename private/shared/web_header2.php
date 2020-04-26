@@ -17,28 +17,27 @@
     <header>
       <!-- <h1>PINKCINEMA</h1> -->
         <!-- START NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="<?php echo url_for('/web/index.php'); ?>">PinkCinema <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo url_for('/web/pages/cartelera.php'); ?>">Cartelera</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo url_for('/web/pages/nosotros.php'); ?>">Nosotros</a>
-              </li>
-            </ul>
-            <!-- Form Loggueo -->
-            <!-- <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Usuario">
-              <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
-              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Acceder</button>
-              <button class="btn btn-outline-primary my-2 my-sm-0 ml-2" type="button">Registrarse</button>
-            </form> -->
-          </div>
-        </nav>
+        
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a href="<?php echo url_for('web/index.php'); ?>" class="navbar-brand">
+                    PinkCinema
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="<?php echo url_for('/web/pages/cartelera.php'); ?>" >Cartelera</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="<?php echo url_for('/web/pages/nosotros.php'); ?>" >Nosotros</a>
+                      </li>
+                      <li class="nav-item" style="border-left: 1px solid white">
+                        <a class="nav-link" href="../web/index.php?cerrar_sesion=1">Salir</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>    
       <!-- END NAVBAR -->
     </header>
 
