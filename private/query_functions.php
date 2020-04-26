@@ -25,11 +25,10 @@ function find_all_peliculas(){
 }
 
 
-function find_pelicula_by_id(){
+function find_pelicula_by_id($id){
   global $db;
-  $sql = "SELECT * FROM usuarios ";
-  $sql .= "WHERE username='" . $user['usuario'] . "' " ;
-  $sql .= "AND contrasenia='" . $user['password'] . "' " ;
+  $sql = "SELECT * FROM peliculas ";
+  $sql .= "WHERE id='" . $id . "' " ;
 	$result_set = mysqli_query($db, $sql);
 	confirm_result_set($result_set);
 	$usuario = mysqli_fetch_assoc($result_set);
