@@ -16,7 +16,7 @@
         
         insert_pelicula($pelicula);
 
-        redirect_to(url_for('web/pages/administracionS/peliculas.php'));
+        redirect_to(url_for('web/pages/administracion/peliculas.php'));
 
     } else {
 

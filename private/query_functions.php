@@ -36,6 +36,33 @@ function find_pelicula_by_id($id){
 	return $usuario;
 }
 
+
+function update_pelicula($pelicula) {
+  global $db;
+
+  $sql = "UPDATE peliculas SET ";
+  $sql .= "nombre='" . $pelicula['nombre'] . "',";
+  $sql .= "genero='" . $pelicula['genero'] . "', ";
+  $sql .= "idioma='" . $pelicula['idioma'] . "',";
+  $sql .= "duracion='" . $pelicula['duracion'] . "', ";
+  $sql .= "clasificacion='" . $pelicula['clasificacion'] . "',";
+  $sql .= "funcion='" . $pelicula['funcion'] . "',";
+  $sql .= "imagen='" . $pelicula['imagen'] . "' ";
+  $sql .= "WHERE id='" . $pelicula['id'] . "' ";
+  $sql .= "LIMIT 1";
+
+  $result = mysqli_query($db, $sql);
+  //for UPDATE statements, $result is true/false
+
+  if ($result) {
+    return true;
+  }else{
+    echo mysqli_error($db);
+    db_disconnect($db);
+    exit;
+  }
+}
+
 /** END MIS FUNCIONES ****/
 
 function find_all_subjects(){
