@@ -1,7 +1,7 @@
 <?php require_once('../../private/initialize.php'); ?>
 <?php 
 
-$alert_tpl =  '<div class="alert alert-danger alert-dismissible fade show mt-5" role="alert">';
+$alert_tpl  =  '<div class="alert alert-danger alert-dismissible fade show mt-5" role="alert">';
 $alert_tpl .=  '<strong>Usuario o contraseña incorrectos</strong>';
 $alert_tpl .=  '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
 $alert_tpl .=  '<span aria-hidden="true">&times;</span>';

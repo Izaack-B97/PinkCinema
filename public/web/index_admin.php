@@ -1,4 +1,4 @@
-<?php require_once('../../private/initialize.php'); ?>
+<!-- <?php require_once('../../private/initialize.php'); ?> -->
 <?php $page_title = 'Inicio'; ?>
 <?php include(SHARED_PATH . '/header_admin.php'); ?>
 
@@ -24,6 +24,11 @@
 <br>
 
 <div id="content-main" class="container mt-2">
+	
+	<!-- START LOGOUT -->
+	<?php include(SHARED_PATH . '/logout.php'); ?>
+	<!-- END LOGOUT -->
+	
 	<!-- START CARRUSEL -->
 	<div id="carouselExampleCaptions" class="carousel slide mb-5" data-ride="carousel">
 		<ol class="carousel-indicators">

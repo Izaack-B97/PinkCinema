@@ -7,6 +7,9 @@
 ?>
 
 <div id="container-administracion" class="container p-5">
+    <!-- START LOGOUT -->
+    <?php include(SHARED_PATH . '/logout.php'); ?>
+    <!-- END LOGOUT -->
     <div class="card p-5 shadow">
         <h1 class="text-primary"><?php echo 'Administraci&oacute;n'; ?>
             <a class="btn btn-primary float-right text-white" role='button' href="<?php echo url_for('/web/pages/administracion/new.php'); ?>">Registrar pelicula</a>

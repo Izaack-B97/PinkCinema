@@ -5,6 +5,9 @@
 <div class="container"> 
     <div class="row">
         <div class="col-sm-12">
+            <!-- START LOGOUT -->
+            <?php include(SHARED_PATH . '/logout.php'); ?>
+            <!-- END LOGOUT -->
             <div class="card shadow-lg p-5">
                 <a class="back-link" href="<?php echo url_for('/web/pages/administracion/peliculas.php'); ?>">&laquo; Back to List</a>
                 <h2 class="text-primary">Registrar pelicula</h2>

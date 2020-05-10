@@ -16,6 +16,10 @@ html {
 /* #content-main{
   padding: 1.5em; 
 } */
+ 
+#myNav li a:hover{
+  color: blue;
+}
 
 #area-estreno{
   margin-left: 100px;
@@ -75,7 +79,7 @@ header {
 }
 
 .navbar{
-  background: red;
+  background: white;
 }
 
 header h1 {

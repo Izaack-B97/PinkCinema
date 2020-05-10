@@ -1,6 +1,34 @@
 <?php
 
 /** STAR MIS FUNCIONES ****/
+function insert_pelicula($pelicula){
+	global $db;
+
+  $sql = "INSERT INTO peliculas ";
+  $sql .= "(nombre, genero, idioma, duracion, clasificacion, funcion, imagen) ";
+  $sql .= "VALUES (";
+  $sql .= "'" . $pelicula['nombre'] . "',";
+  $sql .= "'" . $pelicula['genero'] . "',";
+  $sql .= "'" . $pelicula['idioma'] . "',";
+  $sql .= "'" . $pelicula['duracion'] . "',";
+  $sql .= "'" . $pelicula['clasificacion'] . "',";
+  $sql .= "'" . $pelicula['funcion'] . "',";
+  $sql .= "'" . $pelicula['imagen'] . "' ";
+  $sql .= ")";
+
+  $result = mysqli_query($db, $sql);
+  //for INSERT statements, $result is true/false
+  if ($result) {
+  	return true;
+  	
+  }else{
+  	// INSERT failed
+  	echo mysqli_error($db);
+  	db_disconnect($db);
+    	exit;
+  }
+
+}
 
 function find_user_email_and_password($user){
   global $db;

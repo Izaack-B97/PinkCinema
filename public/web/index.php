@@ -20,6 +20,10 @@
 
 <br>
 
+<!-- START LOGOUT -->
+<?php include(SHARED_PATH . '/logoutClient.php'); ?>
+<!-- END LOGOUT -->	
+
 <!-- START CARRUSEL -->
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">

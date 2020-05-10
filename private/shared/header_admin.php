@@ -6,14 +6,14 @@
   <head>
     <title>GBI - <?php echo h($page_title); ?></title>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/web.css'); ?>" />
     <!-- FONTS FAMILY -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600;800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/web.css'); ?>" />
+
   </head> 
 
   <body class="bg-light">
-  
     <header>
       <!-- <h1>PINKCINEMA</h1> -->
         <!-- START NAVBAR -->
@@ -22,16 +22,6 @@
                 <a href="<?php echo url_for('web/index_admin.php'); ?>" class="navbar-brand">
                     PinkCinema
                 </a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="../../public/web/pages/administracion/peliculas.php" >Administraci&oacute;n</a>
-                      </li>
-                      <li class="nav-item" style="border-left: 1px solid white">
-                        <a class="nav-link" href="../web/index_admin.php?cerrar_sesion=1">Salir</a>
-                      </li>
-                    </ul>
-                </div>
             </div>
         </nav>    
       <!-- END NAVBAR -->
