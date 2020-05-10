@@ -10,10 +10,10 @@
 ?>
 
 <div class="container my-5">
+    <!-- START LOGOUT -->
+    <?php include(SHARED_PATH . '/logout.php'); ?>
+    <!-- END LOGOUT -->
     <div class="row col-sm-12">
-        <!-- START LOGOUT -->
-        <?php include(SHARED_PATH . '/logout.php'); ?>
-        <!-- END LOGOUT -->
         <div class="card p-5 shadow-lg">
             <a class="back-link" href="<?php echo url_for('/web/pages/administracion/peliculas.php'); ?>">&laquo; Back to List</a>
             <h2 class="text-primary">Informaci&oacute;n sobre <i><?php echo $pelicula['nombre']; ?></i></h2>
