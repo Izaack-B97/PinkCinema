@@ -6,7 +6,7 @@
                       <li class="nav-item">
                         <a class="nav-link" href="<?php echo url_for('web/pages/administracion/peliculas.php'); ?>" >Administraci&oacute;n</a>
                       </li>
-                        <a class="nav-link" href="<?php echo url_for('web/index_admin?cerrar_sesion=1'); ?>">Salir</a>
+                        <a class="nav-link" href="<?php echo url_for('web/index_admin.php?cerrar_sesion=1'); ?>">Salir</a>
                       </li>
                     </ul>
                 </div>

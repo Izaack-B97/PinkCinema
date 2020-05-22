@@ -4,7 +4,7 @@
 
 <html lang="en">
   <head>
-    <title>GBI - <?php echo h($page_title); ?></title>
+    <title>PINKCINEMA - <?php echo h($page_title); ?></title>
     <meta charset="utf-8">
     <!-- FONTS FAMILY -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600;800&display=swap" rel="stylesheet"> -->

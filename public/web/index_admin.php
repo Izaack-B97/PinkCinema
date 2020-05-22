@@ -1,23 +1,33 @@
-<!-- <?php require_once('../../private/initialize.php'); ?> -->
-<?php $page_title = 'Inicio'; ?>
+<?php require_once('../../private/initialize.php'); ?>
+<?php 
+	session_start();
+	$page_title = 'Inicio'; 
+?>
 <?php include(SHARED_PATH . '/header_admin.php'); ?>
 
 <?php
+	// echo '<h1>Bienvenido administrador</h1>';
 
-	session_start();
 	if (!isset($_SESSION['rol'])) { // No puede entrar si no tiene un rol
 		header('location: login.php');
 	} else {
 		if ($_SESSION['rol'] != 1) { //Obligamos al usuario a que entre al admin solo por el login
 			header('location: login.php');
-		}
+		} 
 	}
 
-	if (isset($_GET['cerrar_sesion'])) {
+	if (isset($_GET['cerrar_sesion']) && $_GET['cerrar_sesion'] == 1) {
 		session_unset(); // Cerramos session
 		session_destroy(); // Detruimos la session
 		redirect_to(url_for('web/login.php'));
 	}
+	
+	
+
+	// if(isset($_GET['cerrar_sesion'])){
+	// 	redirect_to(url_for('web/login.php?cerrar_sesion=1'));
+	// }
+
 	$peliculas = find_all_peliculas();
 ?>
 

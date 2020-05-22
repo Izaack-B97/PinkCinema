@@ -4,14 +4,12 @@ require_once('../../../private/initialize.php');
  ?>
 <?php $page_title = 'Cartelera'; ?>
 <?php include(SHARED_PATH . '/web_header2.php'); ?>
-<br>
 
-<div class="container">
-    
-    <!-- START LOGOUT -->
-    <?php include(SHARED_PATH . '/logoutClient.php'); ?>
-    <!-- END LOGOUT -->	
+<!-- START LOGOUT -->
+<?php include(SHARED_PATH . '/logoutClient.php'); ?>
+<!-- END LOGOUT -->	
 
+<div class="container mt-3">
     <h1 class="text-primary"><?php echo $page_title; ?></h1>
     <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptatibus aspernatur praesentium asperiores ex unde quam, modi esse quod! Quae reprehenderit nobis eius fuga. Iusto eos voluptates molestias voluptas placeat!</p>
     <hr>

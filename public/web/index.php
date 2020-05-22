@@ -18,8 +18,6 @@
 	}
 ?>
 
-<br>
-
 <!-- START LOGOUT -->
 <?php include(SHARED_PATH . '/logoutClient.php'); ?>
 <!-- END LOGOUT -->	

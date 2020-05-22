@@ -1,12 +1,10 @@
+<?php require_once('./private/initialize.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php 
-header('Location: public/web/index.php');
-	?>
-	<title></title>
+<title></title>
 </head>
 <body>
-
+	<?php redirect_to('./public/web/index.php'); ?>
 </body>
 </html>
